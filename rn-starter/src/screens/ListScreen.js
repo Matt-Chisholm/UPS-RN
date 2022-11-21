@@ -22,7 +22,7 @@ export default function ListScreen() {
         data={friends}
         renderItem={({ item }) => {
           return (
-            <Text>
+            <Text style={styles.textStyle}>
               {item.name} - Age {item.age}
             </Text>
           );
@@ -32,4 +32,9 @@ export default function ListScreen() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  textStyle: {
+    fontSize: 35,
+    margin: 30,
+  },
+});
