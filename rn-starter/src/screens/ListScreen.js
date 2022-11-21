@@ -18,11 +18,12 @@ export default function ListScreen() {
   return (
     <View>
       <FlatList
+        keyExtractor={(friend) => friend.name}
         data={friends}
-        renderItem={(el) => {
+        renderItem={({ item }) => {
           return (
             <Text>
-              {el.item.name} - Age {el.item.age}
+              {item.name} - Age {item.age}
             </Text>
           );
         }}
